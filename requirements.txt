@@ -1,0 +1,10 @@
+pytest
+pymysql
+request
+xlrd
+selenium
+docstring-parser
+excel2json-3
+any-case
+psycopg2
+mysql

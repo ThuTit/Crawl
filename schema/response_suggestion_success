@@ -1,0 +1,281 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "code",
+    "result"
+  ],
+  "properties": {
+    "code": {
+      "$id": "#/properties/code",
+      "type": "string",
+      "title": "The Code Schema",
+      "examples": [
+        "success"
+      ]
+    },
+    "result": {
+      "$id": "#/properties/result",
+      "type": "object",
+      "title": "The Result Schema",
+      "default": null,
+      "required": [
+        "currentPage",
+        "totalItems",
+        "results",
+        "pageSize"
+      ],
+      "properties": {
+        "currentPage": {
+          "$id": "#/properties/result/properties/currentPage",
+          "type": "integer",
+          "title": "The Currentpage Schema"
+        },
+        "totalItems": {
+          "$id": "#/properties/result/properties/totalItems",
+          "type": "integer",
+          "title": "The Totalitems Schema",
+          "examples": [
+            25845
+          ]
+        },
+        "results": {
+          "$id": "#/properties/result/properties/results",
+          "type": "array",
+          "title": "The Results Schema",
+          "items": {
+            "$id": "#/properties/result/properties/results/items",
+            "type": "object",
+            "title": "The Items Schema",
+            "properties": {
+              "id": {
+                "$id": "#/properties/result/properties/results/items/properties/id",
+                "type": "integer",
+                "title": "The Id Schema"
+              },
+              "sellerId": {
+                "$id": "#/properties/result/properties/results/items/properties/sellerId",
+                "type": "integer",
+                "title": "The Sellerid Schema"
+              },
+              "sku": {
+                "$id": "#/properties/result/properties/results/items/properties/sku",
+                "type": "string",
+                "title": "The Sku Schema"
+              },
+              "state": {
+                "$id": "#/properties/result/properties/results/items/properties/state",
+                "type": "string",
+                "title": "The State Schema"
+              },
+              "suggestedProduct": {
+                "$id": "#/properties/result/properties/results/items/properties/suggestedProduct",
+                "type": "object",
+                "title": "The Suggestedproduct Schema",
+                "properties": {
+                  "id": {
+                    "$id": "#/properties/result/properties/results/items/properties/suggestedProduct/properties/id",
+                    "type": "string",
+                    "title": "The Id Schema"
+                  },
+                  "title": {
+                    "$id": "#/properties/result/properties/results/items/properties/suggestedProduct/properties/title",
+                    "type": "string",
+                    "title": "The Title Schema"
+                  },
+                  "price": {
+                    "$id": "#/properties/result/properties/results/items/properties/suggestedProduct/properties/price",
+                    "type": "integer",
+                    "title": "The Price Schema"
+                  },
+                  "shop": {
+                    "$id": "#/properties/result/properties/results/items/properties/suggestedProduct/properties/shop",
+                    "type": "object",
+                    "title": "The Shop Schema",
+                    "required": [
+                      "id",
+                      "name",
+                      "domain"
+                    ],
+                    "properties": {
+                      "id": {
+                        "$id": "#/properties/result/properties/results/items/properties/suggestedProduct/properties/shop/properties/id",
+                        "type": "integer",
+                        "title": "The Id Schema",
+                        "default": 0,
+                        "examples": [
+                          26
+                        ]
+                      },
+                      "name": {
+                        "$id": "#/properties/result/properties/results/items/properties/suggestedProduct/properties/shop/properties/name",
+                        "type": "string",
+                        "title": "The Name Schema",
+                        "default": "",
+                        "examples": [
+                          "Hải Anh Computer"
+                        ],
+                        "pattern": "^(.*)$"
+                      },
+                      "domain": {
+                        "$id": "#/properties/result/properties/results/items/properties/suggestedProduct/properties/shop/properties/domain",
+                        "type": "string",
+                        "title": "The Domain Schema",
+                        "default": "",
+                        "examples": [
+                          "http://haianh.vn/"
+                        ],
+                        "pattern": "^(.*)$"
+                      }
+                    }
+                  },
+                  "category": {
+                    "$id": "#/properties/result/properties/results/items/properties/suggestedProduct/properties/category",
+                    "type": "object",
+                    "title": "The Category Schema",
+                    "default": null,
+                    "properties": {
+                      "id": {
+                        "$id": "#/properties/result/properties/results/items/properties/suggestedProduct/properties/category/properties/id",
+                        "type": "string",
+                        "title": "The Id Schema",
+                        "default": "",
+                        "examples": [
+                          "c807ceffcf9a37a0899e56dea314f063"
+                        ],
+                        "pattern": "^(.*)$"
+                      },
+                      "name": {
+                        "$id": "#/properties/result/properties/results/items/properties/suggestedProduct/properties/category/properties/name",
+                        "type": "string",
+                        "title": "The Name Schema",
+                        "default": "",
+                        "examples": [
+                          "VGA - Card Màn Hình"
+                        ],
+                        "pattern": "^(.*)$"
+                      },
+                      "activate": {
+                        "$id": "#/properties/result/properties/results/items/properties/suggestedProduct/properties/category/properties/activate",
+                        "type": "boolean",
+                        "title": "The Activate Schema"
+                      },
+                      "url": {
+                        "$id": "#/properties/result/properties/results/items/properties/suggestedProduct/properties/category/properties/url",
+                        "type": "string",
+                        "title": "The Url Schema",
+                        "default": "",
+                        "examples": [
+                          "http://haianh.vn/card-man-hinh-vga/"
+                        ],
+                        "pattern": "^(.*)$"
+                      },
+                      "createdAt": {
+                        "$id": "#/properties/result/properties/results/items/properties/suggestedProduct/properties/category/properties/createdAt",
+                        "type": "string",
+                        "title": "The Createdat Schema",
+                        "default": "",
+                        "examples": [
+                          "2019-10-28T15:47:37+07:00"
+                        ],
+                        "pattern": "^(.*)$"
+                      },
+                      "updatedAt": {
+                        "$id": "#/properties/result/properties/results/items/properties/suggestedProduct/properties/category/properties/updatedAt",
+                        "type": "string",
+                        "title": "The Updatedat Schema",
+                        "default": "",
+                        "examples": [
+                          "2020-02-12T17:28:02+07:00"
+                        ],
+                        "pattern": "^(.*)$"
+                      }
+                    },
+                    "required": [
+                      "name",
+                      "url"
+                    ]
+                  },
+                  "url": {
+                    "$id": "#/properties/result/properties/results/items/properties/suggestedProduct/properties/url",
+                    "type": "string",
+                    "title": "The Url Schema",
+                    "default": "",
+                    "examples": [
+                      "http://haianh.vn/card-man-hinh-vga/card-man-hinh-galax/galax-geforce%C2%AE-gtx-1050-ti-exoc-4gb-gddr5.htm"
+                    ],
+                    "pattern": "^(.*)$"
+                  }
+                },
+                "required": [
+                  "title",
+                  "url"
+                ]
+              }
+            },
+            "required": [
+              "sellerId",
+              "suggestedProduct"
+            ]
+          }
+        },
+        "pageSize": {
+          "$id": "#/properties/result/properties/pageSize",
+          "type": "integer",
+          "title": "The Pagesize Schema",
+          "default": 0,
+          "examples": [
+            10
+          ]
+        }
+      }
+    },
+    "extra": {
+      "$id": "#/properties/extra",
+      "type": "object",
+      "title": "The Extra Schema",
+      "default": null,
+      "properties": {
+        "pending": {
+          "$id": "#/properties/extra/properties/pending",
+          "type": "integer",
+          "title": "The Pending Schema",
+          "default": 0,
+          "examples": [
+            25845
+          ]
+        },
+        "approved": {
+          "$id": "#/properties/extra/properties/approved",
+          "type": "integer",
+          "title": "The Approved Schema",
+          "default": 0,
+          "examples": [
+            27
+          ]
+        },
+        "rejected": {
+          "$id": "#/properties/extra/properties/rejected",
+          "type": "integer",
+          "title": "The Rejected Schema",
+          "default": 0,
+          "examples": [
+            4
+          ]
+        },
+        "canceled": {
+          "$id": "#/properties/extra/properties/canceled",
+          "type": "integer",
+          "title": "The Canceled Schema",
+          "default": 0,
+          "examples": [
+            0
+          ]
+        }
+      }
+    }
+  }
+}

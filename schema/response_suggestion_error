@@ -1,0 +1,43 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "code",
+    "extra",
+    "message"
+  ],
+  "properties": {
+    "code": {
+      "$id": "#/properties/code",
+      "type": "string",
+      "title": "The Code Schema",
+      "default": "",
+      "examples": [
+        "bad_request"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "extra": {
+      "$id": "#/properties/extra",
+      "type": "null",
+      "title": "The Extra Schema",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "message": {
+      "$id": "#/properties/message",
+      "type": "string",
+      "title": "The Message Schema",
+      "default": "",
+      "examples": [
+        "{'state': [ErrorDetail(string='\"PENDINGs\" is not a valid choice.', code='invalid_choice')]}"
+      ],
+      "pattern": "^(.*)$"
+    }
+  }
+}

@@ -1,0 +1,157 @@
+{
+  "definitions": {},
+  "$schema": "",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "code",
+    "result"
+  ],
+  "properties": {
+    "code": {
+      "$id": "#/properties/code",
+      "type": "string",
+      "title": "The Code Schema"
+    },
+    "result": {
+      "$id": "#/properties/result",
+      "type": "object",
+      "title": "The Result Schema",
+      "properties": {
+        "id": {
+          "$id": "#/properties/result/properties/id",
+          "type": "integer",
+          "title": "The Id Schema"
+        },
+        "sellerId": {
+          "$id": "#/properties/result/properties/sellerId",
+          "type": "integer",
+          "title": "The Sellerid Schema"
+        },
+        "sku": {
+          "$id": "#/properties/result/properties/sku",
+          "type": "string",
+          "title": "The Sku Schema"
+        },
+        "state": {
+          "$id": "#/properties/result/properties/state",
+          "type": "string",
+          "title": "The State Schema"
+        },
+        "suggestedProduct": {
+          "$id": "#/properties/result/properties/suggestedProduct",
+          "type": "object",
+          "title": "The Suggestedproduct Schema",
+          "properties": {
+            "id": {
+              "$id": "#/properties/result/properties/suggestedProduct/properties/id",
+              "type": "string",
+              "title": "The Id Schema",
+              "examples": [
+                "c0f156063960300fafa7e9b58aad5fbe"
+              ]
+            },
+            "title": {
+              "$id": "#/properties/result/properties/suggestedProduct/properties/title",
+              "type": "string",
+              "title": "The Title Schema"
+            },
+            "brand": {
+              "$id": "#/properties/result/properties/suggestedProduct/properties/brand",
+              "type": "string",
+              "title": "The Brand Schema"
+            },
+            "price": {
+              "$id": "#/properties/result/properties/suggestedProduct/properties/price",
+              "type": "integer",
+              "title": "The Price Schema"
+            },
+            "shop": {
+              "$id": "#/properties/result/properties/suggestedProduct/properties/shop",
+              "type": "object",
+              "title": "The Shop Schema",
+              "required": [
+                "id",
+                "name",
+                "domain"
+              ],
+              "properties": {
+                "id": {
+                  "$id": "#/properties/result/properties/suggestedProduct/properties/shop/properties/id",
+                  "type": "integer",
+                  "title": "The Id Schema"
+                },
+                "name": {
+                  "$id": "#/properties/result/properties/suggestedProduct/properties/shop/properties/name",
+                  "type": "string",
+                  "title": "The Name Schema"
+                },
+                "domain": {
+                  "$id": "#/properties/result/properties/suggestedProduct/properties/shop/properties/domain",
+                  "type": "string",
+                  "title": "The Domain Schema"
+                }
+              }
+            },
+            "category": {
+              "$id": "#/properties/result/properties/suggestedProduct/properties/category",
+              "type": "object",
+              "title": "The Category Schema",
+              "properties": {
+                "id": {
+                  "$id": "#/properties/result/properties/suggestedProduct/properties/category/properties/id",
+                  "type": "string",
+                  "title": "The Id Schema",
+                  "pattern": "^(.*)$"
+                },
+                "name": {
+                  "$id": "#/properties/result/properties/suggestedProduct/properties/category/properties/name",
+                  "type": "string",
+                  "title": "The Name Schema"
+                },
+                "activate": {
+                  "$id": "#/properties/result/properties/suggestedProduct/properties/category/properties/activate",
+                  "type": "boolean",
+                  "title": "The Activate Schema"
+                },
+                "url": {
+                  "$id": "#/properties/result/properties/suggestedProduct/properties/category/properties/url",
+                  "type": "string",
+                  "title": "The Url Schema"
+                },
+                "createdAt": {
+                  "$id": "#/properties/result/properties/suggestedProduct/properties/category/properties/createdAt",
+                  "type": "string",
+                  "title": "The Createdat Schema"
+                },
+                "updatedAt": {
+                  "$id": "#/properties/result/properties/suggestedProduct/properties/category/properties/updatedAt",
+                  "type": "string",
+                  "title": "The Updatedat Schema"
+                }
+              },
+              "required": [
+                "name",
+                "url"
+              ]
+            },
+            "url": {
+              "$id": "#/properties/result/properties/suggestedProduct/properties/url",
+              "type": "string",
+              "title": "The Url Schema"
+            }
+          },
+          "required": [
+            "title",
+            "url"
+          ]
+        }
+      },
+      "required": [
+        "sellerId",
+        "suggestedProduct"
+      ]
+    }
+  }
+}

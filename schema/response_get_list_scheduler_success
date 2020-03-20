@@ -1,0 +1,136 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "string"
+    },
+    "result": {
+      "type": "object",
+      "properties": {
+        "currentPage": {
+          "type": "integer"
+        },
+        "totalItems": {
+          "type": "integer"
+        },
+        "results": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "createdAt": {
+                  "type": "string"
+                },
+                "updatedAt": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "startDate": {
+                  "type": "string"
+                },
+                "scheduleTime": {
+                  "type": "string"
+                },
+                "active": {
+                  "type": "boolean"
+                },
+                "sellerId": {
+                  "type": "integer"
+                },
+                "scheduleType": {
+                  "type": "string"
+                },
+                "settings": {
+                  "type": "object",
+                  "properties": {
+                    "repeatDays": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "integer"
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "repeatDays"
+                  ]
+                },
+                "variables": {
+                  "type": "object",
+                  "properties": {
+                    "subject": {
+                      "type": "string"
+                    },
+                    "shopIds": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "integer"
+                        }
+                      ]
+                    },
+                    "template": {
+                      "type": "string"
+                    },
+                    "receivers": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    "categoryIds": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "subject",
+                    "shopIds",
+                    "template",
+                    "receivers"
+
+                  ]
+                },
+                "task": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "name",
+                "sellerId",
+                "task"
+              ]
+            }
+          ]
+        },
+        "pageSize": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "currentPage",
+        "totalItems",
+        "results",
+        "pageSize"
+      ]
+    }
+  },
+  "required": [
+    "code",
+    "result"
+  ]
+}
